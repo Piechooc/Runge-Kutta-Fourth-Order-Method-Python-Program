@@ -19,9 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e9aaace-f50b-4225-b221-e84e845c8139" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/runge_kutta.py" afterDir="false" />
+    <list default="true" id="2e9aaace-f50b-4225-b221-e84e845c8139" name="Default Changelist" comment="ugly runge kutta">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runge_kutta.py" beforeDir="false" afterPath="$PROJECT_DIR$/runge_kutta.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +36,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="brunch" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JupyterTrust" id="04691957-1ab6-4436-bdc0-3c4a9704e685" />
@@ -48,9 +53,32 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../AI-curse/ai-course-games-tree-search" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.runge_kutta">
+  <component name="RunManager" selected="Python.main">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="jebac-rurki" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="runge_kutta" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="jebac-rurki" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -97,6 +125,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.runge_kutta" />
         <item itemvalue="Python.test_file" />
       </list>
@@ -110,8 +139,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1640807579508</updated>
-      <workItem from="1640807611377" duration="5641000" />
+      <workItem from="1640807611377" duration="5887000" />
+      <workItem from="1640888806988" duration="26000" />
+      <workItem from="1641056126146" duration="5652000" />
     </task>
+    <task id="LOCAL-00001" summary="ugly runge kutta">
+      <created>1640829379130</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1640829379130</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,31 +166,152 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ugly runge kutta" />
+    <option name="LAST_COMMIT_MESSAGE" value="ugly runge kutta" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1492" height="253" key="GridCell.Tab.0.bottom" timestamp="1640829153617">
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1640888831273">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="253" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1640829153617" />
-    <state width="1492" height="253" key="GridCell.Tab.0.center" timestamp="1640829153617">
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1640888831273" />
+    <state width="1492" height="242" key="GridCell.Tab.0.bottom" timestamp="1641061790806">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="253" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1640829153617" />
-    <state width="1492" height="253" key="GridCell.Tab.0.left" timestamp="1640829153617">
+    <state width="1492" height="242" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1641061790806" />
+    <state width="1492" height="242" key="GridCell.Tab.0.center" timestamp="1641061790806">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="253" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1640829153617" />
-    <state width="1492" height="253" key="GridCell.Tab.0.right" timestamp="1640829153617">
+    <state width="1492" height="242" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1641061790806" />
+    <state width="1492" height="242" key="GridCell.Tab.0.left" timestamp="1641061790805">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1492" height="253" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1640829153617" />
+    <state width="1492" height="242" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1641061790805" />
+    <state width="1492" height="242" key="GridCell.Tab.0.right" timestamp="1641061790806">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1492" height="242" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1641061790806" />
+    <state width="1492" height="199" key="GridCell.Tab.1.bottom" timestamp="1641061753430">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1492" height="199" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1641061753430" />
+    <state width="1492" height="199" key="GridCell.Tab.1.center" timestamp="1641061753430">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1492" height="199" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1641061753430" />
+    <state width="1492" height="199" key="GridCell.Tab.1.left" timestamp="1641061753430">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1492" height="199" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1641061753430" />
+    <state width="1492" height="199" key="GridCell.Tab.1.right" timestamp="1641061753430">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1492" height="199" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1641061753430" />
     <state x="277" y="77" key="SettingsEditor" timestamp="1640825127111">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1640825127111" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1640829388337">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1640829388337" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/runge_kutta.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/runge_kutta.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/runge_kutta.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/runge_kutta.py</url>
+          <line>27</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/runge_kutta.py</url>
+          <line>28</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/runge_kutta.py</url>
+          <line>29</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/runge_kutta.py</url>
+          <line>30</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/runge_kutta.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/runge_kutta.py</url>
+          <line>33</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/runge_kutta.py</url>
+          <line>32</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/runge_kutta.py</url>
+          <line>34</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/runge_kutta.py</url>
+          <line>36</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/runge_kutta.py</url>
+          <line>39</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/runge_kutta.py</url>
+          <line>38</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/runge_kutta.py</url>
+          <line>37</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/runge_kutta.py</url>
+          <line>35</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/runge_kutta.py</url>
+          <line>19</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/jebac_rurki$main.coverage" NAME="main Coverage Results" MODIFIED="1641061790797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/jebac_rurki$test_file.coverage" NAME="test_file Coverage Results" MODIFIED="1640825487249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/jebac_rurki$runge_kutta.coverage" NAME="runge_kutta Coverage Results" MODIFIED="1640829153610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/jebac_rurki$runge_kutta.coverage" NAME="runge_kutta Coverage Results" MODIFIED="1640829267898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
