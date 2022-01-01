@@ -25,8 +25,8 @@ class RungeKutta:
     @staticmethod
     def runge_kutta(t0, x0, tn, n, f, solution):
 
-        delta = (tn - t0) / n
-        t = np.arange(t0, tn, delta)
+        delta = (tn - t0) / (n - 1)
+        t = np.arange(t0, tn + delta, delta)
         x_solution = [x0]
         for i in range(n - 1):
             u = t0 + delta/2
