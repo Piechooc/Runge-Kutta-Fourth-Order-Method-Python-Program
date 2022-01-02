@@ -52,7 +52,7 @@ class Gui:
         start_button = Button(self.input_frame, text="calculate", command=self._calculate, width=17,
                               font=(FONT_STYLE, FONT_SIZE))
         start_button.grid(column=2, row=2, pady=5,sticky=E)
-        self.input_frame.pack(pady=15)
+
 
     def _button_click(self, char):
         current = self.input_equation_entry.get()
@@ -125,6 +125,7 @@ class Gui:
     def _update_chart(self):
         self.n *= 2
         self.figure.clear()
+        self.label_n.destroy()
         data, solution = RungeKutta.runge_kutta(0, 1, 10, self.n, Functions.f1, Functions.f1_solution)
         ax = self.figure.add_subplot(111)
 
@@ -137,12 +138,11 @@ class Gui:
         df_solution.plot(kind='line', legend=True, ax=ax, color='r', marker=',', fontsize=10)
 
         ax.set_title('The Title for your chart')
+        self._show_statistics()
         self.chart_type.draw_idle()
 
-
-
     def _create_chart(self, data, solution):
-        self.figure = plt.Figure(figsize=(5, 3), dpi=100)
+        self.figure = plt.Figure(figsize=(7, 4), dpi=80)
         ax = self.figure.add_subplot(111)
         self.chart_type = FigureCanvasTkAgg(self.figure, self.gui)
         self.chart_type.get_tk_widget().pack(side=BOTTOM)
@@ -164,31 +164,41 @@ class Gui:
         ax.set_title('The Title for your chart')
 
     def _create_checkboxes(self):
-        var = IntVar()
+        var = StringVar(self.input_frame, "0")
         label_exact_solutions = Label(self.input_frame,text="Exact solutions: ",pady=5,font=(FONT_STYLE, FONT_SIZE))
         label_exact_solutions.grid(column=0,row=0,sticky=W)
 
-
-        # check_box_1 = Checkbutton(self.input_frame, text="x' = -2 * x * e\u1D57", variable=var1,pady=5, font=(FONT_STYLE, FONT_SIZE))
-        # check_box_1.grid(column=0,row=1,sticky=W)
-        # check_box_2 = Checkbutton(self.input_frame, text="x' = (t - 3/t + 2) * (1/2)", variable=var2,pady=5,font=(FONT_STYLE, FONT_SIZE))
-        # check_box_2.grid(column=0,row=2,sticky=W)
-        # check_box_3 = Checkbutton(self.input_frame, text="x' = (x\u00B2 + t\u00B2)/(t*x)", variable=var3,pady=5,font=(FONT_STYLE, FONT_SIZE))
-        # check_box_3.grid(column=0,row=3,sticky=W)
-
-        checkboxes = ["x' = -2 * x * e\u1D57","x' = (t - 3/t + 2) * (1/2)","x' = (x\u00B2 + t\u00B2)/(t*x)"]
+        checkboxes = {"x' = -2 * x * e\u1D57" : "1","x' = (t - 3/t + 2) * (1/2)" : "2","x' = (x\u00B2 + t\u00B2)/(t*x)" : "3"}
 
         cnt = 1
-        for eq in checkboxes:
-            Radiobutton(self.input_frame, text=eq, variable=var).grid(column=0, row=cnt)
+        for (text, value) in checkboxes.items():
+            Radiobutton(self.input_frame, text=text, variable=var,
+                        value=value,font=(FONT_STYLE, FONT_SIZE),command=lambda:self._handle_checkboxes(var)).grid(column=0,row=cnt, ipady=5, sticky=W)
             cnt += 1
 
-    def _handle_checkboxes(self,checkboxes):
-        pass
+
+    def _handle_checkboxes(self,var):
+        options = [["-2 * x * e**t",0,1,1],["(t - 3/t + 2) * (1/2)",1,2,0],["(x**2 + t**2)/(t*x)",1,2,-1]] #f,t0,tn,x0
+        self.input_equation_entry.delete(0,END)
+        self.input_x0.delete(0,END)
+        self.input_t0.delete(0,END)
+        self.input_tn.delete(0,END)
+
+        ind = int(var.get()) - 1
+        self.input_equation_entry.insert(0,options[ind][0])
+        self.input_t0.insert(0,options[ind][1])
+        self.input_tn.insert(0,options[ind][2])
+        self.input_x0.insert(0,options[ind][3])
+
 
     def return_parameters(self):
         return self.input_equation_entry.get(),self.input_t0.get(),self.input_tn.get(),self.input_x0.get()
 
+
+    def _show_statistics(self):
+        self.label_n = Label(self.gui,text=f"steps: {str(self.n)}",pady=5,font=(FONT_STYLE, FONT_SIZE))
+
+        self.label_n.pack()
 
     def _calculate(self):
         input_equation_string = self.input_equation_entry.get()
@@ -203,4 +213,6 @@ class Gui:
         self._create_keyboard()
         self._create_chart(data,solution)
         self._create_checkboxes()
+        self.input_frame.pack(pady=15)
+        self._show_statistics()
         self.gui.mainloop()
