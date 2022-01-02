@@ -23,23 +23,45 @@ class RungeKutta:
         return plt.figure
 
     @staticmethod
+    def runge_kutta(t0, x0, tn, n, f):
+        delta = (tn - t0) / (n - 1)
+        t = np.arange(t0, tn + delta, delta)
+        x_solution = [x0]
+
+        for _ in range(n - 1):
+            u = t0 + delta / 2
+            k1 = delta * f(t0, x0)
+            k2 = delta * f(u, x0 + k1 / 2)
+            k3 = delta * f(u, x0 + k2 / 2)
+            k4 = delta * f(t0 + delta, x0 + k3)
+            next_x = x0 + (k1 + 2 * k2 + 2 * k3 + k4) / 6
+            x_solution.append(next_x)
+            t0 += delta
+            x0 = next_x
+            
+        return {'t': t, 'x(t)': x_solution}
+
+    @staticmethod
     def runge_kutta(t0, x0, tn, n, f, solution):
 
         delta = (tn - t0) / (n - 1)
         t = np.arange(t0, tn + delta, delta)
         x_solution = [x0]
-        for i in range(n - 1):
-            u = t0 + delta/2
+        exact_range = np.arange(0, t[-1], 0.001)
+        exact_solution = solution(exact_range).tolist()
+
+        for _ in range(n - 1):
+            u = t0 + delta / 2
             k1 = delta * f(t0, x0)
-            k2 = delta * f(u, x0 + k1/2)
-            k3 = delta * f(u, x0 + k2/2)
+            k2 = delta * f(u, x0 + k1 / 2)
+            k3 = delta * f(u, x0 + k2 / 2)
             k4 = delta * f(t0 + delta, x0 + k3)
-            next_x = x0 + (k1 + 2*k2 + 2*k3 + k4)/6
+            next_x = x0 + (k1 + 2 * k2 + 2 * k3 + k4) / 6
             x_solution.append(next_x)
             t0 += delta
             x0 = next_x
 
-        return RungeKutta._get_plot(t, x_solution, solution, n)
+        return {'t': t, 'x(t)': x_solution}, {'exact_t': exact_range, 'exact_x': exact_solution}
 
 
 
