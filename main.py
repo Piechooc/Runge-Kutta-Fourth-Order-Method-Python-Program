@@ -3,6 +3,5 @@ from Functions import Functions
 from gui import Gui
 
 if __name__ == '__main__':
-    user = "t"
     gui = Gui()
     gui.run()

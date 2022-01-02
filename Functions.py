@@ -25,7 +25,7 @@ class Functions:
         return -(x/t) + 1 + 1/t
 
     @staticmethod
-    def f2_solution(t, x):
+    def f2_solution(t):
         return (t - 3/t + 2)/2
 
     """
@@ -37,5 +37,5 @@ class Functions:
         return (x*x + t*t) / (t*x)
 
     @staticmethod
-    def f3_solution(t, x):
+    def f3_solution(t):
         return -t * math.sqrt(2 * math.log(t) + 1)
