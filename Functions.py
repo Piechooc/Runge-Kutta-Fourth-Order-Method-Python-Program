@@ -39,3 +39,4 @@ class Functions:
     @staticmethod
     def f3_solution(t, x):
         return -t * math.sqrt(2 * math.log(t) + 1)
+

@@ -14,16 +14,26 @@ class RungeKutta:
 
     @staticmethod
     def _get_plot(t, x_solution, solution, n):
-        exact_range = np.arange(0, t[-1], 0.001)
-        plt.subplot(111)
-        plt.plot(exact_range, solution(exact_range), t, x_solution, "-o")
-        plt.show()
-        print("epsilon: ", RungeKutta._get_epsilon(t, x_solution, solution))
-        print("steps: ", n)
-        return plt.figure
+        if solution is not None:
+            exact_range = np.arange(0, t[-1], 0.001)
+            plt.subplot(111)
+            plt.plot(exact_range, solution(exact_range), t, x_solution, "-o")
+            plt.grid(True)
+            plt.show()
+            print("epsilon: ", RungeKutta._get_epsilon(t, x_solution, solution))
+            print("steps: ", n)
+            return plt.figure
+        else:
+            plt.subplot(111)
+            plt.plot(t, x_solution, "-o")
+            plt.grid(True)
+            plt.show()
+            print("steps: ", n)
+            return plt.figure
+
 
     @staticmethod
-    def runge_kutta(t0, x0, tn, n, f, solution):
+    def runge_kutta(t0, x0, tn, n, f, solution=None):
 
         delta = (tn - t0) / (n - 1)
         t = np.arange(t0, tn + delta, delta)
