@@ -187,6 +187,7 @@ class Gui:
         ax.set_title('Solution plot')
 
         self.chart_type.draw_idle()
+        self.exist_chart = True
 
     def _reset(self):
         self.n = 2
