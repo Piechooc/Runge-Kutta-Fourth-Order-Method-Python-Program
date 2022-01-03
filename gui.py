@@ -1,12 +1,12 @@
 from tkinter import *
 from runge_kutta import RungeKutta
-from Functions import Functions
+from functions import Functions
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
 from pandas import DataFrame
 from datetime import datetime
-from FunctionBuilder import FunctionBuilder
+from function_builder import FunctionBuilder
 from tkinter import messagebox
 
 FONT_SIZE = 12
