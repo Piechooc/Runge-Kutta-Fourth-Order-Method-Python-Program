@@ -9,4 +9,4 @@ Mateusz Powęska <br>
 Paweł Pycia <br>
 
 
-![animation](https://user-images.githubusercontent.com/84449847/147949142-27a1d9b4-62b7-498a-b35b-4a9e2d39a7ee.gif)
+![animation](https://github.com/Piechooc/Runge-Kutta-Fourth-Order-Method-Python-Program/blob/main/animation.gif)
